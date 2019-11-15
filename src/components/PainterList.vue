@@ -9,8 +9,8 @@
 
                 <v-divider v-else-if="item.divider" :key="index" inset></v-divider>
 
-                <v-list-item v-else :key="item.title" ripple @click="">
-                    <v-list-item-avatar>
+                <v-list-item v-else :key="item.title" ripple>
+                    <v-list-item-avatar @click="drawer = !drawer">
                         <img :src="item.avatar">
                     </v-list-item-avatar>
                     <v-list-item-content>

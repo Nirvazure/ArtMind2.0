@@ -1,6 +1,6 @@
 <template>
-<v-flex xs12 text-center>
-    <v-parallax dark src="http://img.zcool.cn/community/01856e57fba43ba84a0d304f7cacbe.jpg@1280w_1l_2o_100sh.jpg">
+<v-flex text-center>
+    <v-parallax dark src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573822706162&di=d218dcdf14c1d5e4b45b3b9e08ae84cb&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1203%2F01%2Fc1%2F10695750_10695750_1330579114750.jpg">
         <h3 class="display-2 font-weight-bold mb-3">
             ArtMind
         </h3>
@@ -22,7 +22,6 @@
 <script>
 import countTo from "vue-count-to";
 export default {
-    name: 'HelloWorld',
     components: {
         countTo,
     },
