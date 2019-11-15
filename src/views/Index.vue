@@ -35,7 +35,12 @@ export default {
         Jumbotron,
     },
     data: () => ({
-
+        icons: [
+            'bluetooth',
+            'email',
+            'wifi',
+            'timer',
+        ],
     })
 }
 </script>
