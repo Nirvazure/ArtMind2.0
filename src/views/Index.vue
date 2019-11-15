@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div text-center wrap>
+    <Jumbotron></Jumbotron>
   </div>
 </template>
+
+<script>
+import Jumbotron from '../components/Jumbotron'
+
+export default {
+  components:{
+    Jumbotron,
+  },
+  data:()=>({
+
+  })
+}
+</script>
