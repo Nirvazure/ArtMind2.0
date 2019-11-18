@@ -1,5 +1,5 @@
 # artmind3.0
-
+npm install --save vue-picture-input
 ## Project setup
 ```
 npm install
