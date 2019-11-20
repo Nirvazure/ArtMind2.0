@@ -27,7 +27,7 @@
             <v-card>
                 <v-card-title>
                     <v-icon left="">mdi-anchor</v-icon>
-                    <span class="title font-weight-bold">流派分析</span>
+                    <span class="title font-weight-bold">时代分析</span>
                 </v-card-title>
                 <v-card-text>
                     <v-chip label color="primary" text-color="white">抽象派</v-chip>
@@ -43,9 +43,7 @@
                     <span class="title font-weight-bold">画家推测</span>
                 </v-card-title>
                 <v-card-text>
-                    <v-avatar>
-                        <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
-                    </v-avatar>
+                    <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John"></v-img>
                 </v-card-text>
                 <v-card-action></v-card-action>
             </v-card>
