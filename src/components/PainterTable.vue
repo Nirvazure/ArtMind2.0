@@ -14,6 +14,7 @@
         <v-col cols="12" sm="12" md='3'>
             <v-card>
                 <v-card-title>
+                    <p>{{tar_painter.id}}</p>
                     <v-img :src="img"></v-img>
                 </v-card-title>
                 <p class="text-center title font-weight-black">{{tar_painter.name}}</p>
@@ -30,13 +31,18 @@
 import axios from "axios";
 export default {
     data: () => ({
-        tar_painter:{
-            'name':'',
-            'style':'',
-            'era':'',
-            'img':''
+        tar_painter: {
+            'id': '',
+            'name': '',
+            'style': '',
+            'era': '',
+            'img': ''
         },
         headers: [{
+                text: 'ID',
+                value: 'id'
+            },
+            {
                 text: 'Paint',
                 value: 'name'
             },
@@ -53,7 +59,8 @@ export default {
                 value: 'img'
             }
         ],
-        items: []
+        items: [],
+        img:require('@/assets/painters/010103.jpg')
     }),
     created() {
         axios.get("./painter.json").then(res => {
@@ -63,7 +70,14 @@ export default {
     methods: {
         doSth(event) {
             console.log(event)
-            this.tar_painter.name=event.name
+            this.tar_painter.name = event.name
+            this.tar_painter.id = event.id
+            console.log(this.getImgById(this.tar_painter.id))
+        },
+        getImgById(id) {
+            let tar_path = '@/assets/painters/' + id + '.jpg'
+            // let myImg = require(tar_path)
+            return tar_path
         }
     },
     filters: {
@@ -111,6 +125,7 @@ export default {
             }
             return colorItem[id]
         },
+
     }
 }
 </script>
