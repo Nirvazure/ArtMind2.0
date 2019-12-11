@@ -1,8 +1,5 @@
 <template>
 <v-app>
-    <v-app-bar dark>
-        <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
     <v-content>
         <Jumbotron></Jumbotron>
     </v-content>

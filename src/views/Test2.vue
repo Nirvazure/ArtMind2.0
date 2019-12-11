@@ -1,47 +1,80 @@
 <template>
-<div>
-    <v-sheet class="mx-auto" elevation="8" max-width="800">
-        <v-slide-group v-model="model" class="pa-4" center-active=true>
-            <v-slide-item v-for="n in 15" :key="n" v-slot:default="{ active, toggle }">
-                <v-card :color="active ? 'primary' : 'grey lighten-1'" class="ma-4" height="200" width="100" @click="toggle">
-                    <v-row class="fill-height" align="center" justify="center">
-                        <v-scale-transition>
-                            <v-icon v-if="active" color="white" size="48" v-text="'mdi-close-circle-outline'"></v-icon>
-                        </v-scale-transition>
-                    </v-row>
-                </v-card>
-            </v-slide-item>
-        </v-slide-group>
-    </v-sheet>
-    <v-sheet class="mx-auto" elevation="8" max-width="800">
-        <v-slide-group v-model="model" class="pa-4" center-active=true multiple>
-            <v-slide-item v-for="(n,i) in images" :key="i"  v-slot:default="{ active, toggle }">
-                <v-card :color="active ? 'primary' : 'grey lighten-1'" class="ma-4" height="100" width="100" @click="toggle">
-                    <v-row class="fill-height" align="center" justify="center">
-                        <v-scale-transition>
-                            <v-img :src="n" width="200" v-if="active"></v-img>
-                            <v-icon color="white" size="48" v-text="'mdi-close-circle-outline'"></v-icon>
-                        </v-scale-transition>
-                    </v-row>
+<v-container>
+    <PainterTable></PainterTable>
+    <v-row>
+        <v-col cols="12" sm="12" md='9'>
+            <v-container>
+                <v-row>
+                    <v-col>
+                        <v-card>
+                            <v-card-title>我的日程</v-card-title>
+                            <v-calendar></v-calendar>
+                        </v-card>
+                    </v-col>
+                    <v-col>
+                        <v-card>
+                            <v-card-title>我的计划</v-card-title>
+                            <v-row>
+                                <v-col class="text-center">
+                                    <v-progress-circular width="10" size="90" color='green' value=54>72</v-progress-circular>
+                                </v-col>
+                                <v-col class="text-center">
+                                    <v-progress-circular width="10" size="90" color='green' value=54>72</v-progress-circular>
+                                </v-col>
+                                <v-col class="text-center">
+                                    <v-progress-circular width="10" size="90" color='green' value=54>72</v-progress-circular>
+                                </v-col>
+                            </v-row>
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-col>
+        <v-col cols="12" sm="12" md='3'>
+            <v-card>
+                <v-card-title>
+                    <v-img :src="img"></v-img>
+                </v-card-title>
+                <!-- <v-card-text> -->
 
-                </v-card>
-            </v-slide-item>
-        </v-slide-group>
-    </v-sheet>
-</div>
+                <p class="text-center title font-weight-black">
+                    Nirvazure Darkrai
+                </p>
+                <v-row>
+                    <v-col class="text-center">
+                        <p class="title">ss</p>
+                        <p>231</p>
+                    </v-col>
+                    <v-divider vertical></v-divider>
+                    <v-col class="text-center">
+                        <p class="title">ss</p>
+                        <p>231</p>
+                    </v-col>
+                    <v-divider vertical></v-divider>
+                    <v-col class="text-center">
+                        <p class="title">ss</p>
+                        <p>231</p>
+                    </v-col>
+                </v-row>
+                <v-card-actions>
+                    <v-btn color="primary" block>
+                        关注
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>
+import PainterTable from '../components/PainterTable'
 export default {
+    components: {
+        PainterTable
+    },
     data: () => ({
-        images: [
-            require("../assets/0.jpg"),
-            require("../assets/1.jpg"),
-            require("../assets/2.jpg"),
-            require("../assets/3.jpg"),
-            require("../assets/4.jpg"),
-            require("../assets/5.jpg"),
-        ]
-    }),
+        img: require('../assets/3.jpg')
+    })
 }
 </script>
