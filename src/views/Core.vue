@@ -1,7 +1,7 @@
 <template>
-<v-row align="center" justify="center">
-    <v-col cols="12" md="8" align="center" justify="center">
-        <picture-input ref="pictureInput" width="900" height="450" accept="image/jpeg,image/png" size="10" hideChangeButton=true :custom-strings="{
+<v-container>
+    <v-card>
+        <picture-input ref="pictureInput" accept="image/jpeg,image/png" size="10" hideChangeButton=true :custom-strings="{
         upload: '<h1>Bummer!</h1>',
         drag: 'Drag a 😺 GIF or GTFO'
       }" @change="onChange">
@@ -9,9 +9,8 @@
         <v-progress-linear :active="loading" :indeterminate="loading" bottom color="deep-purple accent-4"></v-progress-linear>
         <v-btn block color="green" dark @click="startTest">{{btnText}}</v-btn>
         <Report v-if="response"></Report>
-    </v-col>
-
-</v-row>
+    </v-card>
+</v-container>
 </template>
 
 <script>
@@ -25,7 +24,7 @@ export default {
     data: () => ({
         loading: false,
         btnText: '开启艺术探索',
-        response:false
+        response: false
     }),
     methods: {
         onChange(image) {
