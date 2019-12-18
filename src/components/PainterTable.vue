@@ -2,7 +2,7 @@
 <v-container>
     <v-row>
         <v-col cols="12" sm="12" md='9'>
-            <v-data-table dense :headers='headers' :items='items' @click:row="doSth">
+            <v-data-table :headers='headers' :items='items' @click:row="doSth">
                 <template v-slot:item.time='{item}'>
                     <span>{{item.time|getEra}}</span>
                 </template>

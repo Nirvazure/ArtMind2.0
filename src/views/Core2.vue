@@ -1,25 +1,34 @@
 <template>
 <v-container>
-    <v-card>
-        <picture-input ref="pictureInput" accept="image/jpeg,image/png" size="10" hideChangeButton=true :custom-strings="{
-        upload: '<h1>Bummer!</h1>',
-        drag: 'Drag a 😺 GIF or GTFO'
-      }" @change="onChange">
-        </picture-input>
-        <v-progress-linear :active="loading" :indeterminate="loading" bottom color="deep-purple accent-4"></v-progress-linear>
-        <v-btn block color="green" dark @click="startTest">{{btnText}}</v-btn>
-    </v-card>
-    <Report v-if="response"></Report>
+    <v-row>
+        <v-col cols="12" md='9'>
+            <v-card class="my-1">
+                <picture-input ref="pictureInput" accept="image/jpeg,image/png" hideChangeButton=true @change="onChange"></picture-input>
+                <v-card-actions>
+                    <v-btn block dark @click="startTest">{{btnText}}</v-btn>
+                </v-card-actions>
+            </v-card>
+            <StyleAnalyse class="my-2" v-if="response"></StyleAnalyse>
+        </v-col>
+        <v-col cols="12" md='3'>
+            <PainterAnalyse class="my-1" v-if="response"></PainterAnalyse>
+            <EraAnalyse class="my-2" v-if="response"></EraAnalyse>
+        </v-col>
+    </v-row>
 </v-container>
 </template>
 
 <script>
+import StyleAnalyse from '@/components/Report/StyleAnalyse.vue'
+import EraAnalyse from '@/components/Report/EraAnalyse'
+import PainterAnalyse from '@/components/Report/PainterAnalyse'
 import PictureInput from 'vue-picture-input'
-import Report from '../components/Report'
 export default {
     components: {
-        Report,
-        PictureInput
+        PictureInput,
+        PainterAnalyse,
+        StyleAnalyse,
+        EraAnalyse
     },
     data: () => ({
         loading: false,
