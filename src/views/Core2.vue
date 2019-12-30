@@ -8,11 +8,11 @@
                     <v-btn block dark @click="startTest">{{btnText}}</v-btn>
                 </v-card-actions>
             </v-card>
-            <StyleAnalyse class="my-2" v-if="response"></StyleAnalyse>
+            <StyleAnalyse class="my-2"></StyleAnalyse>
         </v-col>
         <v-col cols="12" md='3'>
-            <PainterAnalyse class="my-1" v-if="response"></PainterAnalyse>
-            <EraAnalyse class="my-2" v-if="response"></EraAnalyse>
+            <PainterAnalyse class="my-5"></PainterAnalyse>
+            <EraAnalyse class="my-10"></EraAnalyse>
         </v-col>
     </v-row>
 </v-container>
