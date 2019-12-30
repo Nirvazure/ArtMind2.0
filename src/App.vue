@@ -19,24 +19,18 @@
         <v-img :src="avatar"></v-img>
 
     </v-navigation-drawer>
-    <v-app-bar app dark clipped-left>
+    <v-app-bar app color="teal" dark clipped-left>
         <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
         <v-toolbar-title>ArtMind
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-sheet max-width="500" class='ma-8'>
-            <v-text-field dense solo-inverted rounded hide-details prepend-inner-icon="mdi-magnify" label="Search" />
-        </v-sheet>
-        <v-badge color="teal" overlap>
+        <v-badge color="teal" overlap >
             <template v-slot:badge>0</template>
             <v-icon>mdi-bell</v-icon>
         </v-badge>
-        <v-btn icon @click='$router.push({path: `/toys`});'>
+        <v-btn icon @click="rightDrawer = !rightDrawer">
             <v-icon>mdi-apps</v-icon>
         </v-btn>
-        <v-avatar tile @click="rightDrawer = !rightDrawer">
-            <v-img :src="avatar"></v-img>
-        </v-avatar>
     </v-app-bar>
     <v-content dark>
         <router-view></router-view>
