@@ -1,14 +1,14 @@
 <template>
-<v-container>
+  <v-container>
     <PainterTable></PainterTable>
-</v-container>
+  </v-container>
 </template>
 
 <script>
-import PainterTable from '../components/PainterTable'
+import PainterTable from "../components/PainterTable";
 export default {
-    components: {
-        PainterTable
-    },
-}
+  components: {
+    PainterTable
+  }
+};
 </script>

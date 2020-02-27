@@ -16,13 +16,13 @@ const routes = [
     component: () => import("../views/Core.vue")
   },
   {
-    path: "/core2",
-    name: "core2",
-    component: () => import("../views/Core2.vue")
+    path: "/painter",
+    name: "painter",
+    component: () => import("../views/Painter")
   },
   {
     path: "/test",
-    component: () => import("../views/Test2")
+    component: () => import("../views/Test")
   }
 ];
 

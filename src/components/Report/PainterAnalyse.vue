@@ -1,22 +1,17 @@
 <template>
-<v-card>
-    <v-card-title>
-        <v-icon left>mdi-share</v-icon>
-        <span class="title font-weight-bold">画家推测</span>
-    </v-card-title>
-    <v-card-text>
+  <v-container>
+    <span class="title font-weight-bold">画家推测</span>
+    <v-sheet class="text-center">
+      <v-avatar size="90">
         <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John"></v-img>
-    </v-card-text>
-    <v-card-action></v-card-action>
-</v-card>
+      </v-avatar>
+    </v-sheet>
+  </v-container>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>
