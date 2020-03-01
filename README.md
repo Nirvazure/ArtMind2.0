@@ -2,7 +2,7 @@
 <h2 align="center">ArtMind</h2>
 <h3 align="center">最懂你的人工智能分析引擎</h3>
 <p>
-  <h4 align="center"><code>vue-admin-vuetify</code> is a Front-end component project.</h4>
+  <h4 align="center"><code>ArtMind</code> is a Front-end component project.</h4>
   <h4 align="center">Component demo based on <a href="https://github.com/vuejs/vue">vue</a> and <a href="https://github.com/vuetifyjs/vuetify">vuetify</a></h4>
 </p>
 
@@ -37,7 +37,7 @@ Currently this is just a **beta version**.
 
 ### :art: Live Demo
 
-[http://67.218.155.117:8020](http://67.218.155.117:8020)
+:tada: Open http://localhost:8090 to see the demo.
 
 ### :rocket: Getting Started
 
@@ -53,23 +53,6 @@ npm install
 npm run serve
 ```
 
-:tada: Open http://localhost:8090 to see the demo.
-
-If [hot reload](https://vue-loader.vuejs.org/guide/hot-reload.html#state-preservation-rules) fails,
-modify your `vue.config.js`
-
-```javascript
-module.exports = {
-  chainWebpack: config => {
-    config.resolve.symlinks(true);
-  }
-};
-```
-
-or replace `cnpm` with `npm`
-
-`npm config set registry https://registry.npm.taobao.org`
-
 #### Compiles and minifies for production
 
 ```bash
@@ -84,14 +67,19 @@ npm run lint
 
 ### :camera: Screenshots
 
-|                                                             |                                                 |
-| ----------------------------------------------------------- | ----------------------------------------------- |
-| ![vue-admin-vuetify.png](screenshots/vue-admin-vuetify.png) | ![charts-line.png](screenshots/charts-line.png) |
-| ![components-maps](screenshots/components-maps.png)         |                                                 |
+|                                             |                                       |
+| ------------------------------------------- | ------------------------------------- |
+| ![vue-admin-vuetify.png](screenshots/1.png) | ![charts-line.png](screenshots/2.png) |
+| ![components-maps](screenshots/3.png)       | ![charts-line.png](screenshots/4.png) |
 
 ### :white_check_mark: Roadmap
 
-- [x] add: Dashboard.
+npm install --save vue-picture-input
+找到 picture-input 的源文件
+node_modules/vue-picture-input/PictureInput.vue
+在 props 里面更改 height 的 default 值
+之前是 default: Number.MAX_SAFE_INTEGER/，改为 default: Number.MAX_SAFE_INTEGER/2，这样就保证了长宽比是 2：1
+
 - [x] add: Icons.
 - [x] add: Editor components.
 - [x] add: Jsonlint.
@@ -112,33 +100,3 @@ Detailed changes for each release are documented in the [release notes](https://
 ### :copyright: License
 
 Under the MIT license. See [LICENSE](http://opensource.org/licenses/MIT) file for more details.
-
-# artmind3.0
-
-npm install --save vue-picture-input
-找到 picture-input 的源文件
-node_modules/vue-picture-input/PictureInput.vue
-在 props 里面更改 height 的 default 值
-之前是 default: Number.MAX_SAFE_INTEGER/，改为 default: Number.MAX_SAFE_INTEGER/2，这样就保证了长宽比是 2：1
-
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
