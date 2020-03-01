@@ -1,10 +1,5 @@
 <template>
-  <v-parallax
-    class="text-center pa-0"
-    height="800"
-    dark
-    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573822706162&di=d218dcdf14c1d5e4b45b3b9e08ae84cb&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1203%2F01%2Fc1%2F10695750_10695750_1330579114750.jpg"
-  >
+  <v-parallax class="text-center pa-0" height="800" dark :src="bgImg">
     <h3 class="display-3 font-weight-bold">ArtMind</h3>
     <h4 class="heading font-thin mb-7">最懂你的AI绘画分析引擎</h4>
     <p class="subheading font-weight-black">
@@ -26,6 +21,7 @@ export default {
     countTo
   },
   data: () => ({
+    bgImg: require("@/assets/crafts/44444.jpg"),
     num_of_painter: 30,
     num_of_paints: 3000
   })
