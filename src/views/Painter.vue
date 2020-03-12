@@ -92,27 +92,15 @@
 </template>
 
 <script>
+import painters from "@/api/painters.js";
 export default {
   data: () => ({
     tab: null,
     items: ["Painters", "Crafts", "Deserts", "Cocktails"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    img: require("@/assets/painters/010103.jpg"),
-    painters: [
-      { name: "拉斐尔", avatar: require("@/assets/painters/010102.jpg") },
-      { name: "达芬奇", avatar: require("@/assets/painters/010103.jpg") },
-      { name: "梵高", avatar: require("@/assets/painters/020204.jpg") },
-      { name: "拉斐尔", avatar: require("@/assets/painters/010102.jpg") },
-      { name: "达芬奇", avatar: require("@/assets/painters/010103.jpg") },
-      { name: "梵高", avatar: require("@/assets/painters/020204.jpg") }
-    ],
-    crafts: [
-      { name: "拉斐尔", avatar: require("@/assets/painters/010102.jpg") },
-      { name: "达芬奇", avatar: require("@/assets/painters/010103.jpg") },
-      { name: "梵高", avatar: require("@/assets/painters/020204.jpg") },
-      { name: "拉斐尔", avatar: require("@/assets/painters/010102.jpg") }
-    ]
+    painters: painters,
+    crafts: painters
   })
 };
 </script>
