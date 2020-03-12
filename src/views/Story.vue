@@ -2,13 +2,17 @@
   <v-container>
     <v-row>
       <v-col cols="12" sm="4" v-for="(model,i) in models" :key="i">
-        <v-card :color="model.color?model.color:'grey'" dark :disabled="model.status=='待应用'" shaped>
+        <v-card :disabled="model.status=='待应用'" shaped>
           <v-img :src="model.avatar" aspect-ratio="2"></v-img>
-          <v-card-title>{{model.name}}</v-card-title>
-          <v-card-subtitle>{{model.description}}</v-card-subtitle>
-          <v-card-actions>
-            <v-btn block>{{model.status}}</v-btn>
-          </v-card-actions>
+          <CircleStatistic
+            :title="model.name"
+            sub-title="90%"
+            :caption="model.description"
+            icon="mdi-wechat"
+            :color="model.color?model.color:'grey'"
+            :value="90"
+            status="已部署"
+          ></CircleStatistic>
         </v-card>
       </v-col>
     </v-row>
@@ -21,7 +25,11 @@
 </template>
 
 <script>
+import CircleStatistic from "@/components/Widgets/CircleStatistic";
 export default {
+  components: {
+    CircleStatistic
+  },
   data: () => ({
     models: [
       {
