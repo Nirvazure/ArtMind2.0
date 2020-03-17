@@ -88,6 +88,19 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-list>
+      <v-list-item-group>
+        <v-list-item v-for="(p, i) in painters" :key="i">
+          <v-list-item-avatar>
+            <v-img :src="p.avatar"></v-img>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title v-html="p.name"></v-list-item-title>
+            <v-list-item-title>{{ p.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-item-group>
+    </v-list>
   </v-container>
 </template>
 

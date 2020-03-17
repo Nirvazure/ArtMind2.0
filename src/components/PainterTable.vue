@@ -15,7 +15,7 @@
         <v-card>
           <v-card-title>
             <p>{{tar_painter.id}}</p>
-            <v-img :src="img"></v-img>
+            <v-img :src="tar_painter.img"></v-img>
           </v-card-title>
           <p class="text-center title font-weight-black">{{tar_painter.name}}</p>
           <v-card-actions>
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import painters from "@/api/painters";
 import axios from "axios";
 export default {
   data: () => ({
@@ -60,8 +61,8 @@ export default {
         value: "img"
       }
     ],
-    items: [],
-    img: require("@/assets/painters/010103.jpg")
+    items: painters
+    // img: require("@/assets/painters/010103.jpg")
   }),
   created() {
     axios.get("./painter.json").then(res => {
@@ -73,6 +74,7 @@ export default {
       console.log(event);
       this.tar_painter.name = event.name;
       this.tar_painter.id = event.id;
+      this.tar_painter.img = event.img;
       console.log(this.getImgById(this.tar_painter.id));
     },
     getImgById(id) {

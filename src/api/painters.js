@@ -41,8 +41,8 @@ export default [
   },
   {
     id: 2,
-    name: "保罗 塞尚",
-    title: "",
+    name: "保罗塞尚",
+    title: "现代艺术之父",
     avatar: require("@/assets/painters/保罗塞尚.jpg"),
     style: "",
     era: ""
@@ -74,9 +74,9 @@ export default [
   {
     id: 2,
     name: "德加",
-    title: "",
+    title: "一个不印象派的印象派",
     avatar: require("@/assets/painters/德加.jpg"),
-    style: "",
+    style: "印象派",
     era: ""
   },
   {
@@ -90,7 +90,7 @@ export default [
   {
     id: 2,
     name: "卡拉瓦乔",
-    title: "",
+    title: "逃犯",
     avatar: require("@/assets/painters/卡拉瓦乔.jpg"),
     style: "",
     era: ""
@@ -99,6 +99,7 @@ export default [
     id: 1,
     name: "梵高",
     title: "",
+    description: "每个人的心中都有一团火，路过的人只看到烟",
     avatar: require("@/assets/painters/梵高.jpg"),
     style: "",
     era: ""
@@ -124,6 +125,62 @@ export default [
     name: "康定斯基",
     title: "",
     avatar: require("@/assets/painters/康定斯基.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "维拉斯凯兹",
+    title: "光影大师",
+    avatar: require("@/assets/painters/维拉斯凯兹.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "伦勃朗",
+    title: "光影大师",
+    avatar: require("@/assets/painters/伦勃朗.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "威廉透纳",
+    title: "奇才",
+    avatar: require("@/assets/painters/威廉透纳.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "康斯太勃尔",
+    title: "奇才",
+    avatar: require("@/assets/painters/康斯太勃尔.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "莫奈",
+    title: "睡莲",
+    avatar: require("@/assets/painters/莫奈.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "雷诺阿",
+    title: "幸福画家",
+    avatar: require("@/assets/painters/雷诺阿.jpg"),
+    style: "",
+    era: ""
+  },
+  {
+    id: 2,
+    name: "鲁本斯",
+    title: "",
+    avatar: require("@/assets/painters/鲁本斯.jpg"),
     style: "",
     era: ""
   }
