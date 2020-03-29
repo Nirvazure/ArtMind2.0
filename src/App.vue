@@ -1,26 +1,15 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant>
-      <v-img
-        @click="$router.push({ path: `/` })"
-        class="mx-3 my-3"
-        :src="avatar"
-      ></v-img>
+      <v-img @click="$router.push({ path: `/` })" class="mx-3 my-3" :src="avatar"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
-          <v-list-item
-            v-for="(item, i) in items"
-            :key="i"
-            @click="routerChange(item.text)"
-          >
+          <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text)">
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title
-                class="font-weight-bold"
-                v-text="item.text"
-              ></v-list-item-title>
+              <v-list-item-title class="font-weight-bold" v-text="item.text"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -40,7 +29,7 @@ export default {
     item: 1,
     items: [
       {
-        text: "core",
+        text: "analyse",
         icon: "mdi-gamepad-square"
       },
       {
