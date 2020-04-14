@@ -53,7 +53,8 @@
             </v-list-item>
           </v-list>
           <v-card-actions>
-            <v-btn color="success" block @click.stop="drawer = !drawer">测试</v-btn>
+            <v-text-field v-model="label" label="Label"></v-text-field>
+            <v-btn color="success" @click.stop="drawer = !drawer">评价</v-btn>
           </v-card-actions>
           <Report v-if="!drawer"></Report>
         </v-card>

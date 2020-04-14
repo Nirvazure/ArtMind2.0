@@ -59,23 +59,6 @@
       <v-timeline-item class="text-right">timeline item</v-timeline-item>
       <v-timeline-item>timeline item</v-timeline-item>
     </v-timeline>
-
-    <!-- <v-row>
-      <v-col v-for="(painter,i) in painters" :key="i" cols="12" md="2">
-        <v-card>
-          <v-card-text class="text-center">
-            <v-avatar size="100">
-              <v-img :src="painter.avatar"></v-img>
-            </v-avatar>
-            <p>{{painter.name}}</p>
-            <v-chip small dark color="blue">文艺复兴</v-chip>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn color="primary" dark block>关注</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>-->
     <v-row>
       <v-col v-for="(painter, i) in crafts" :key="i" cols="12" md="3">
         <v-card>
@@ -88,19 +71,6 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-list>
-      <v-list-item-group>
-        <v-list-item v-for="(p, i) in painters" :key="i">
-          <v-list-item-avatar>
-            <v-img :src="p.avatar"></v-img>
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title v-html="p.name"></v-list-item-title>
-            <v-list-item-title>{{ p.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list-item-group>
-    </v-list>
   </v-container>
 </template>
 

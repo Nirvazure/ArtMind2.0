@@ -45,7 +45,11 @@ export default {
         icon: "mdi-account"
       },
       {
-        text: "story",
+        text: "mentor",
+        icon: "mdi-account"
+      },
+      {
+        text: "platform",
         icon: "mdi-account"
       }
     ]

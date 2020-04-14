@@ -22,12 +22,15 @@ const routes = [
   },
   {
     path: "/test",
-    component: () => import("@/views/Test2")
+    component: () => import("@/views/Test")
   },
   {
-    path: "/story",
-    name: "story",
-    component: () => import("@/views/Story")
+    path: "/mentor",
+    component: () => import("@/views/Mentor")
+  },
+  {
+    path: "/platform",
+    component: () => import("@/views/Platform")
   }
 ];
 
