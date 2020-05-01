@@ -1,8 +1,7 @@
 <template>
   <v-container>
-    <!-- <h1 class="text-center">ArtMind</h1> -->
     <v-row class="d-flex justify-center">
-      <v-card width="80%">
+      <v-card width="90%">
         <picture-input
           ref="pictureInput"
           accept="image/jpeg, image/png"
@@ -21,7 +20,7 @@
           color="deep-purple accent-4"
         ></v-progress-linear>
         <v-toolbar dense>
-          <v-overflow-btn :items="dropdown_font" label="Select font" hide-details class="pa-0"></v-overflow-btn>
+          <v-overflow-btn :items="dropdown_font" label="Select Model" hide-details class="pa-0"></v-overflow-btn>
           <template v-if="$vuetify.breakpoint.mdAndUp">
             <v-divider vertical></v-divider>
             <v-overflow-btn
@@ -35,12 +34,6 @@
             <v-divider vertical></v-divider>
             <v-spacer></v-spacer>
             <v-btn-toggle v-model="toggle_multiple" color="primary" dense group multiple>
-              <v-btn :value="1" text>
-                <v-icon>mdi-format-bold</v-icon>
-              </v-btn>
-              <v-btn :value="2" text>
-                <v-icon>mdi-format-italic</v-icon>
-              </v-btn>
               <v-btn :value="3" text>
                 <v-icon>mdi-format-underline</v-icon>
               </v-btn>
@@ -53,21 +46,18 @@
           </template>
         </v-toolbar>
         <v-divider></v-divider>
-        <v-container v-if="response" height="200">
-          <v-row>
-            <v-col cols="12" sm="4">
-              <EraAnalyse></EraAnalyse>
-            </v-col>
-            <v-divider vertical></v-divider>
-            <v-col cols="12" sm="4">
-              <StyleAnalyse></StyleAnalyse>
-            </v-col>
-            <v-divider vertical></v-divider>
-            <v-col cols="12" sm="3">
-              <PainterAnalyse></PainterAnalyse>
-            </v-col>
-          </v-row>
-        </v-container>
+
+        <v-row v-if="response" height="200">
+          <v-col cols="12" sm="4">
+            <EraAnalyse></EraAnalyse>
+          </v-col>
+          <v-col cols="12" sm="4">
+            <StyleAnalyse></StyleAnalyse>
+          </v-col>
+          <v-col cols="12" sm="4">
+            <PainterAnalyse></PainterAnalyse>
+          </v-col>
+        </v-row>
       </v-card>
     </v-row>
   </v-container>

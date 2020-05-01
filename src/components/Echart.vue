@@ -59,12 +59,12 @@ export default {
             }
           },
           indicator: [
-            { name: "输出", max: 100 },
-            { name: "坦度", max: 100 },
-            { name: "推线", max: 100 },
-            { name: "团战", max: 100 },
-            { name: "支援", max: 100 },
-            { name: "控制", max: 100 }
+            { name: "印象派", max: 100 },
+            { name: "抽象派", max: 100 },
+            { name: "现实主义", max: 100 },
+            { name: "巴洛克", max: 100 },
+            { name: "洛可可", max: 100 },
+            { name: "达达主义", max: 100 }
           ]
         },
         legend: {

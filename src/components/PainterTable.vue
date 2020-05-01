@@ -1,29 +1,13 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" sm="12" md="9">
-        <v-data-table :headers="headers" :items="items" @click:row="doSth">
-          <template v-slot:item.time="{item}">
-            <span>{{item.time|getEra}}</span>
-          </template>
-          <template v-slot:item.style="{item}">
-            <v-chip dark label small :color="item.style|getColorById">{{item.style|getStyleById}}</v-chip>
-          </template>
-        </v-data-table>
-      </v-col>
-      <v-col cols="12" sm="12" md="3">
-        <v-card>
-          <v-card-title>
-            <p>{{tar_painter.id}}</p>
-            <v-img :src="tar_painter.img"></v-img>
-          </v-card-title>
-          <p class="text-center title font-weight-black">{{tar_painter.name}}</p>
-          <v-card-actions>
-            <v-btn color="primary" block>关注</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+    <v-data-table :headers="headers" :items="items" @click:row="doSth">
+      <template v-slot:item.time="{item}">
+        <span>{{item.time|getEra}}</span>
+      </template>
+      <template v-slot:item.style="{item}">
+        <v-chip dark label small :color="item.style|getColorById">{{item.style|getStyleById}}</v-chip>
+      </template>
+    </v-data-table>
   </v-container>
 </template>
 

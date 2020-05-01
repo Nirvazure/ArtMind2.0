@@ -1,9 +1,6 @@
 <template>
   <v-container>
     <v-row>
-      <h3>绘画班13</h3>
-    </v-row>
-    <v-row>
       <v-col col="12" md="9">
         <v-card elevation="24" class="mx-auto">
           <v-carousel
@@ -15,11 +12,6 @@
             height="400"
           >
             <v-carousel-item v-for="(slide, i) in slides" :key="i">
-              <!-- <v-sheet :color="colors[i]" height="100%" tile>
-                <v-row class="fill-height" align="center" justify="center">
-                  <div class="display-3">{{ slide }} Slide</div>
-                </v-row>
-              </v-sheet>-->
               <v-sheet height="100%">
                 <v-img :src="slide.avatar"></v-img>
               </v-sheet>
@@ -55,6 +47,11 @@
       </v-col>
       <v-col cols="12" sm="3">
         <v-card class="mx-auto" max-width="400" tile>
+          <v-card-title>
+            绘画班17
+            <v-spacer></v-spacer>
+            <v-btn color="yellow" dark>17/24</v-btn>
+          </v-card-title>
           <v-list two-line>
             <template v-for="(item, index) in items">
               <v-subheader v-if="item.header" :key="item.header" inset>{{ item.header }}</v-subheader>
@@ -65,7 +62,7 @@
                 </v-list-item-avatar>
                 <v-list-item-content>
                   <v-list-item-title v-html="item.title"></v-list-item-title>
-                  <v-chip label small>hhh</v-chip>
+                  <v-chip label small>提交了作业</v-chip>
                 </v-list-item-content>
               </v-list-item>
             </template>
@@ -112,19 +109,19 @@ export default {
       },
       {
         avatar: "https://picsum.photos/250/300?image=660",
-        title: "Meeting @ Noon",
+        title: "Li Charlie",
         subtitle:
           "<span class='text--primary'>Spike Lee</span> &mdash; I'll be in your neighborhood"
       },
       {
         avatar: "https://picsum.photos/250/300?image=821",
-        title: 'Summer BBQ <span class="grey--text text--lighten-1"></span>',
+        title: 'Criss Wu<span class="grey--text text--lighten-1"></span>',
         subtitle:
           "<span class='text--primary'>to Operations support</span> &mdash; Wish I could come."
       },
       {
         avatar: "https://picsum.photos/250/300?image=783",
-        title: "Yes yes",
+        title: "Wang Allen",
         subtitle:
           "<span class='text--primary'>Bella</span> &mdash; Do you have Paris recommendations"
       },
@@ -136,13 +133,13 @@ export default {
       },
       {
         avatar: "https://picsum.photos/250/300?image=1006",
-        title: "Dinner tonight?",
+        title: "Dinner Brown",
         subtitle:
           "<span class='text--primary'>LaToya</span> &mdash; Do you want to hang out?"
       },
       {
         avatar: "https://picsum.photos/250/300?image=146",
-        title: "So long",
+        title: "Allen War",
         subtitle:
           "<span class='text--primary'>Nancy</span> &mdash; Do you see what time it is?"
       }

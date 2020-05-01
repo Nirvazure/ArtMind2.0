@@ -1,8 +1,14 @@
 <template>
   <v-container>
     <v-row>
-      <Models></Models>
+      <v-col>
+        <Models></Models>
+      </v-col>
+      <v-col cols="12" sm="8">
+        <PainterTable></PainterTable>
+      </v-col>
     </v-row>
+
     <v-row>
       <v-col v-for="(v,i) in statistics" :key="i" class="mx-7">
         <mini-statistic :icon="v.icon" :count="v.count" :title="v.title" :color="v.color"></mini-statistic>
@@ -12,6 +18,7 @@
 </template>
 
 <script>
+import PainterTable from "@/components/PainterTable";
 import MiniStatistic from "@/components/Widgets/MiniStatistic";
 import Models from "@/components/Model";
 export default {
@@ -30,7 +37,8 @@ export default {
   }),
   components: {
     Models,
-    MiniStatistic
+    MiniStatistic,
+    PainterTable
   }
 };
 </script>

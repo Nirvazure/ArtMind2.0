@@ -34,6 +34,16 @@ export default {
         name: "浪漫主义",
         value: 20,
         color: "cyan"
+      },
+      {
+        name: "写实主义",
+        value: 5,
+        color: "green"
+      },
+      {
+        name: "达达主义",
+        value: 3,
+        color: "cyan"
       }
     ]
   })
