@@ -62,9 +62,7 @@
       <v-list v-if="drawer" two-line>
         <template v-for="(item, index) in items">
           <v-subheader v-if="item.header" :key="item.header" inset>{{ item.header }}</v-subheader>
-
           <v-divider v-else-if="item.divider" :key="index" inset></v-divider>
-
           <v-list-item v-else :key="item.title" ripple @click>
             <v-list-item-avatar>
               <img :src="item.avatar" />

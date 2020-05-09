@@ -4,8 +4,48 @@ export default [
     name: "达芬奇",
     title: "",
     avatar: require("@/assets/painters/达芬奇.jpg"),
-    style: "",
-    era: 1
+    style: 1,
+    era: 1,
+  },
+  {
+    id: 2,
+    name: "安德烈萨奇",
+    title: "",
+    avatar: require("@/assets/painters/达芬奇.jpg"),
+    style: 1,
+    era: 1,
+  },
+  {
+    id: 3,
+    name: "拉斐尔",
+    title: "",
+    avatar: require("@/assets/painters/达芬奇.jpg"),
+    style: 1,
+    era: 1,
+  },
+  {
+    id: 4,
+    name: "米开朗琪罗",
+    title: "",
+    avatar: require("@/assets/painters/达芬奇.jpg"),
+    style: 1,
+    era: 1,
+  },
+  {
+    id: 5,
+    name: "乔尔乔内",
+    title: "",
+    avatar: require("@/assets/painters/达芬奇.jpg"),
+    style: 1,
+    era: 1,
+  },
+  {
+    id: 5,
+    name: "缇香",
+    title: "",
+    avatar: require("@/assets/painters/达芬奇.jpg"),
+    style: 1,
+    era: 1,
   },
   {
     id: 2,
@@ -13,7 +53,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/阿布杜丹.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -21,7 +61,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/埃贡席勒.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -29,7 +69,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/爱德华蒙克.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -37,7 +77,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/安迪霍沃尔.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -45,7 +85,7 @@ export default [
     title: "现代艺术之父",
     avatar: require("@/assets/painters/保罗塞尚.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -53,7 +93,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/保罗克利.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -61,7 +101,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/毕加索.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -69,7 +109,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/毕沙罗.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -77,7 +117,7 @@ export default [
     title: "一个不印象派的印象派",
     avatar: require("@/assets/painters/德加.jpg"),
     style: "印象派",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -85,7 +125,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/德拉克洛瓦.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -93,7 +133,7 @@ export default [
     title: "逃犯",
     avatar: require("@/assets/painters/卡拉瓦乔.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -102,7 +142,7 @@ export default [
     description: "每个人的心中都有一团火，路过的人只看到烟",
     avatar: require("@/assets/painters/梵高.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -110,7 +150,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/高更.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 1,
@@ -118,7 +158,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/拉斐尔.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -126,7 +166,7 @@ export default [
     title: "",
     avatar: require("@/assets/painters/康定斯基.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -134,7 +174,7 @@ export default [
     title: "光影大师",
     avatar: require("@/assets/painters/维拉斯凯兹.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -142,7 +182,7 @@ export default [
     title: "光影大师",
     avatar: require("@/assets/painters/伦勃朗.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -150,7 +190,7 @@ export default [
     title: "奇才",
     avatar: require("@/assets/painters/威廉透纳.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -158,7 +198,7 @@ export default [
     title: "奇才",
     avatar: require("@/assets/painters/康斯太勃尔.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -166,7 +206,7 @@ export default [
     title: "睡莲",
     avatar: require("@/assets/painters/莫奈.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -174,7 +214,7 @@ export default [
     title: "幸福画家",
     avatar: require("@/assets/painters/雷诺阿.jpg"),
     style: "",
-    era: ""
+    era: "",
   },
   {
     id: 2,
@@ -182,6 +222,6 @@ export default [
     title: "",
     avatar: require("@/assets/painters/鲁本斯.jpg"),
     style: "",
-    era: ""
-  }
+    era: "",
+  },
 ];

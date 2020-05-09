@@ -8,36 +8,36 @@ const routes = [
   {
     path: "/",
     name: "index",
-    component: Index
+    component: Index,
   },
   {
     path: "/analyse",
     name: "analyse",
-    component: () => import("@/views/Analyse.vue")
+    component: () => import("@/views/Analyse.vue"),
   },
   {
     path: "/painter",
     name: "painter",
-    component: () => import("@/views/Painter")
+    component: () => import("@/views/Painter"),
   },
   {
     path: "/test",
-    component: () => import("@/views/Test")
+    component: () => import("@/views/Test"),
   },
   {
     path: "/mentor",
-    component: () => import("@/views/Mentor")
+    component: () => import("@/views/Mentor2"),
   },
   {
     path: "/platform",
-    component: () => import("@/views/Platform")
-  }
+    component: () => import("@/views/Platform"),
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

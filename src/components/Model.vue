@@ -33,21 +33,21 @@ export default {
         avatar: require("@/assets/west.jpg"),
         status: "已部署",
         color: "cyan"
+      },
+      {
+        name: "中国山水",
+        description: "用于中国风山水画分析",
+        avatar: require("@/assets/china.jpg"),
+        status: "待应用"
+        // color: "teal"
+      },
+      {
+        name: "日本浮世绘",
+        description: "用于日式浮世绘风格分析",
+        avatar: require("@/assets/japan.jpg"),
+        status: "待应用"
+        // color: "orange"
       }
-      // {
-      //   name: "中国山水",
-      //   description: "用于中国风山水画分析",
-      //   avatar: require("@/assets/china.jpg"),
-      //   status: "待应用"
-      //   // color: "teal"
-      // },
-      // {
-      //   name: "日本浮世绘",
-      //   description: "用于日式浮世绘风格分析",
-      //   avatar: require("@/assets/japan.jpg"),
-      //   status: "待应用"
-      //   // color: "orange"
-      // }
     ]
   })
 };
