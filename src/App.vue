@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant>
+    <v-navigation-drawer v-model="leftDrawer" app clipped permanent expand-on-hover>
       <v-img @click="$router.push({ path: `/` })" class="mx-3 my-3" :src="avatar"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
@@ -26,6 +26,7 @@ export default {
   data: () => ({
     avatar: require("@/assets/avatar.jpg"),
     leftDrawer: true,
+    miniVariant: false,
     item: 1,
     items: [
       {
@@ -33,7 +34,7 @@ export default {
         icon: "mdi-gamepad-square"
       },
       {
-        text: "",
+        text: "student",
         icon: "mdi-soccer"
       },
       {
@@ -42,7 +43,7 @@ export default {
       },
       {
         text: "painter",
-        icon: "mdi-account"
+        icon: "mdi-palette"
       },
       {
         text: "mentor",

@@ -38,13 +38,17 @@
                         <p>{{ painter.name }}</p>
                         <v-chip small dark color="blue">文艺复兴</v-chip>
                       </v-card-text>
-                      <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-btn icon>
-                          <v-icon small>mdi-heart</v-icon>
-                        </v-btn>
-                        <v-btn icon>
-                          <v-icon small>mdi-share-variant</v-icon>
+                      <v-card-actions class="white justify-center">
+                        <v-btn
+                          v-for="(social, i) in socials"
+                          :key="i"
+                          :color="social.color"
+                          class="white--text"
+                          fab
+                          icon
+                          small
+                        >
+                          <v-icon>{{ social.icon }}</v-icon>
                         </v-btn>
                       </v-card-actions>
                     </v-card>
@@ -79,6 +83,20 @@ import painters from "@/api/painters.js";
 export default {
   data: () => ({
     tab: null,
+    socials: [
+      {
+        icon: "mdi-facebook",
+        color: "indigo"
+      },
+      {
+        icon: "mdi-linkedin",
+        color: "cyan darken-1"
+      },
+      {
+        icon: "mdi-instagram",
+        color: "red lighten-3"
+      }
+    ],
     items: ["Painters", "Crafts", "Deserts", "Cocktails"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="9">
+      <v-col>
         <v-mentor-tag></v-mentor-tag>
       </v-col>
-      <v-col>
+      <v-col cols="12" md="3">
         <v-mentor-msg-list></v-mentor-msg-list>
       </v-col>
     </v-row>
@@ -17,8 +17,8 @@ import MentorMsgList from "@/components/MentorMsgList";
 export default {
   components: {
     "v-mentor-tag": MentorTag,
-    "v-mentor-msg-list": MentorMsgList,
-  },
+    "v-mentor-msg-list": MentorMsgList
+  }
 };
 </script>
 

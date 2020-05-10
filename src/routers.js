@@ -22,11 +22,28 @@ const routes = [
   },
   {
     path: "/test",
-    component: () => import("@/views/Test"),
+    component: () => import("@/views/Craft"),
   },
   {
     path: "/mentor",
     component: () => import("@/views/Mentor2"),
+  },
+  {
+    path: "/student",
+    component: () => import("@/views/Student"),
+    redirect: "/student/home",
+    children: [
+      {
+        path: "home",
+        name: "Home",
+        component: () => import("@/views/Student/Home"),
+      },
+      {
+        path: "history",
+        name: "history",
+        component: () => import("@/views/Student/History"),
+      },
+    ],
   },
   {
     path: "/platform",

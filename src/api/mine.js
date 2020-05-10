@@ -1,0 +1,15 @@
+export default {
+  id: "A-0016",
+  name: "莫心仪",
+  age: 20,
+  slave_time: 2,
+  type: "",
+  height: 165,
+  weight: 43,
+  bust: 88,
+  waist: 65,
+  hips: 89,
+  status: "受训中",
+  club: "伊甸",
+  avatar: require("@/assets/students/1.jpg"),
+};

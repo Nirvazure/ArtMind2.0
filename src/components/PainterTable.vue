@@ -1,11 +1,12 @@
 <template>
   <v-container>
-    <v-data-table :headers="headers" :items="items" @click:row="doSth">
+    <v-data-table :headers="headers" :items="items">
       <template v-slot:item.time="{item}">
         <span>{{item.time|getEra}}</span>
       </template>
+
       <template v-slot:item.style="{item}">
-        <v-chip dark label small :color="item.style|getColorById">{{item.style|getStyleById}}</v-chip>
+        <v-chip dark label small :color="item.style|getColorById"></v-chip>
       </template>
     </v-data-table>
   </v-container>
@@ -16,13 +17,6 @@ import painters from "@/api/painters";
 import axios from "axios";
 export default {
   data: () => ({
-    tar_painter: {
-      id: "",
-      name: "",
-      style: "",
-      era: "",
-      img: ""
-    },
     headers: [
       {
         text: "ID",
@@ -42,31 +36,17 @@ export default {
       },
       {
         text: "Avatar",
-        value: "img"
+        value: "avatar"
       }
     ],
     items: painters
-    // img: require("@/assets/painters/010103.jpg")
   }),
   created() {
     axios.get("./painter.json").then(res => {
       this.items = res.data;
     });
   },
-  methods: {
-    doSth(event) {
-      console.log(event);
-      this.tar_painter.name = event.name;
-      this.tar_painter.id = event.id;
-      this.tar_painter.img = event.img;
-      console.log(this.getImgById(this.tar_painter.id));
-    },
-    getImgById(id) {
-      let tar_path = "@/assets/painters/" + id + ".jpg";
-      // let myImg = require(tar_path)
-      return tar_path;
-    }
-  },
+  methods: {},
   filters: {
     getStyleById(id) {
       var styleItem = {
