@@ -2,7 +2,12 @@
   <v-app>
     <!-- <v-navigation-drawer v-model="leftDrawer" app clipped permanent expand-on-hover> -->
     <v-navigation-drawer v-model="leftDrawer" app clipped>
-      <v-img @click="$router.push({ path: `/` })" class="mx-3 my-3" :src="avatar"></v-img>
+      <v-container class="text-center">
+        <v-avatar size="200">
+          <v-img @click="$router.push({ path: `/` })" class="mx-3 my-3" :src="avatar"></v-img>
+        </v-avatar>
+        <v-chip color="teal" dark label width="200" class="mt-3">学生用户</v-chip>
+      </v-container>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text)">
@@ -39,7 +44,7 @@ export default {
         icon: "mdi-gamepad-square"
       },
       {
-        text: "student",
+        text: "Info",
         icon: "mdi-soccer"
       },
       {

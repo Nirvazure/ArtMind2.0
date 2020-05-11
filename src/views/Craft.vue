@@ -6,13 +6,16 @@
     :img="img"
     height="100%"
   >
-    <v-card class="d-felx" elevation="12" width="240" height="400">
+    <v-card class="d-felx whiteA" elevation="12" width="240" height="400" shaped>
       <v-card-title class="d-felx justify-center">
-        <v-avatar size="150" class="mt-5">
+        <v-avatar size="150" class="mt-5 whiteB">
           <v-img :src="painterImg"></v-img>
         </v-avatar>
       </v-card-title>
-      <v-card-title>梵高</v-card-title>
+      <h2 class="text-center">梵高</h2>
+      <v-card-text
+        class="font-black"
+      >文森特·威廉·梵高（Vincent Willem van Gogh，1853年3月30日—1890年7月29日），荷兰后印象派画家。代表作有《星月夜》、自画像系列、向日葵系列等。</v-card-text>
     </v-card>
   </v-card>
 </template>
@@ -29,3 +32,9 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+.whiteA {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+</style>

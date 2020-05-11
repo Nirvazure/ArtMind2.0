@@ -34,9 +34,9 @@ const routes = [
     component: () => import("@/views/Mentor/index"),
   },
   {
-    path: "/student",
+    path: "/info",
     component: () => import("@/views/Student/index"),
-    redirect: "/student/home",
+    redirect: "/info/home",
     children: [
       {
         path: "home",
