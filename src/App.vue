@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app clipped permanent expand-on-hover>
+    <!-- <v-navigation-drawer v-model="leftDrawer" app clipped permanent expand-on-hover> -->
+    <v-navigation-drawer v-model="leftDrawer" app clipped>
       <v-img @click="$router.push({ path: `/` })" class="mx-3 my-3" :src="avatar"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
@@ -31,6 +32,10 @@ export default {
     items: [
       {
         text: "analyse",
+        icon: "mdi-gamepad-square"
+      },
+      {
+        text: "evaluate",
         icon: "mdi-gamepad-square"
       },
       {

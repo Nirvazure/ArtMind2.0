@@ -16,6 +16,11 @@ const routes = [
     component: () => import("@/views/Analyse.vue"),
   },
   {
+    path: "/evaluate",
+    name: "evaluate",
+    component: () => import("@/views/Evaluate.vue"),
+  },
+  {
     path: "/painter",
     name: "painter",
     component: () => import("@/views/Painter"),
@@ -26,11 +31,11 @@ const routes = [
   },
   {
     path: "/mentor",
-    component: () => import("@/views/Mentor2"),
+    component: () => import("@/views/Mentor/index"),
   },
   {
     path: "/student",
-    component: () => import("@/views/Student"),
+    component: () => import("@/views/Student/index"),
     redirect: "/student/home",
     children: [
       {
