@@ -6,7 +6,8 @@
         <v-avatar size="200">
           <v-img @click="$router.push({ path: `/` })" class="mx-3 my-3" :src="avatar"></v-img>
         </v-avatar>
-        <v-chip color="teal" dark label width="200" class="mt-3">学生用户</v-chip>
+        <h2>Nirvazure</h2>
+        <v-chip color="teal" dark label>学生用户</v-chip>
       </v-container>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
@@ -48,7 +49,7 @@ export default {
         icon: "mdi-soccer"
       },
       {
-        text: "test",
+        text: "Gallery",
         icon: "mdi-palette"
       },
       {
@@ -57,7 +58,7 @@ export default {
       },
       {
         text: "mentor",
-        icon: "mdi-account"
+        icon: "mdi-palette"
       },
       {
         text: "platform",

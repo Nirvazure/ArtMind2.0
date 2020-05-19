@@ -2,7 +2,7 @@
   <div>
     <v-card color="teal" height="180" dark>
       <v-card-title class="font-weight-bold display-1">
-        Tasks in Week
+        410班
         <v-spacer></v-spacer>
         <v-btn light>
           <v-icon>mdi-plus</v-icon>发布作业
@@ -38,9 +38,9 @@
 
     <v-card class="mt-10">
       <v-tabs>
-        <v-tab>作业管理</v-tab>
+        <v-tab>日程管理</v-tab>
         <v-tab>学生管理</v-tab>
-        <v-tab>Item Three</v-tab>
+        <v-tab>作业管理</v-tab>
       </v-tabs>
       <v-container>
         <v-calendar></v-calendar>

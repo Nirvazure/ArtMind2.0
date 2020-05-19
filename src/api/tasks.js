@@ -1,31 +1,31 @@
 export default [
   {
-    name: "Nirvazure",
+    name: "ChaoBo Li",
     avatar: require("@/assets/students/1.jpg"),
     Date: "",
     craft: "",
   },
   {
-    name: "Nirvazure",
+    name: "Yu Bai",
     avatar: require("@/assets/students/2.jpg"),
     Date: "",
     craft: "",
   },
   {
-    name: "Nirvazure",
+    name: "Furong Li",
     avatar: require("@/assets/students/3.jpg"),
     Date: "",
     craft: "",
     color: "teal",
   },
   {
-    name: "Nirvazure",
+    name: "Yan Li",
     avatar: require("@/assets/students/4.jpg"),
     Date: "",
     craft: "",
   },
   {
-    name: "Nirvazure",
+    name: "Fu Yang",
     avatar: require("@/assets/students/5.jpg"),
     Date: "",
     craft: "",

@@ -1,68 +1,63 @@
 <template>
   <v-container>
-    <v-timeline dense>
-      <v-timeline-item>
-        <v-card>
-          <v-img
-            class="text-center justify-center py-6"
-            height="100%"
-            aspect-ratio="10"
-            src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2478879494,2180777851&fm=26&gp=0.jpg"
-          >
-            <v-row align="end" class="fill-height">
-              <v-col class="py-0">
-                <v-list-item color="rgba(0, 0, 0, .4)" dark>
-                  <v-list-item-content>
-                    <v-list-item-title class="font-weight-bold display-2">文艺复兴</v-list-item-title>
-                    <v-list-item-subtitle>约1300-1600</v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
+    <v-card>
+      <v-img
+        class="text-center justify-center py-6"
+        height="100%"
+        aspect-ratio="10"
+        src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2478879494,2180777851&fm=26&gp=0.jpg"
+      >
+        <v-row align="end" class="fill-height">
+          <v-col class="py-0">
+            <v-list-item color="rgba(0, 0, 0, .4)" dark>
+              <v-list-item-content>
+                <v-list-item-title class="font-weight-bold display-2">文艺复兴</v-list-item-title>
+                <v-list-item-subtitle>约1300-1600</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-col>
+        </v-row>
+      </v-img>
+
+      <v-tabs v-model="tab" background-color="transparent" color="basil" grow>
+        <v-tab v-for="item in items" :key="item">{{ item }}</v-tab>
+      </v-tabs>
+
+      <v-tabs-items v-model="tab">
+        <v-tab-item v-for="item in items" :key="item">
+          <v-container>
+            <v-row>
+              <v-col v-for="(painter, i) in painters" :key="i" cols="12" md="2">
+                <v-card flat class="basil">
+                  <v-card-text class="text-center">
+                    <v-avatar size="100">
+                      <v-img :src="painter.avatar"></v-img>
+                    </v-avatar>
+                    <p>{{ painter.name }}</p>
+                    <v-chip small dark color="blue">文艺复兴</v-chip>
+                  </v-card-text>
+                  <v-card-actions class="white justify-center">
+                    <v-btn
+                      v-for="(social, i) in socials"
+                      :key="i"
+                      :color="social.color"
+                      class="white--text"
+                      fab
+                      icon
+                      small
+                    >
+                      <v-icon>{{ social.icon }}</v-icon>
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
               </v-col>
+              <v-divider vertical></v-divider>
             </v-row>
-          </v-img>
+          </v-container>
+        </v-tab-item>
+      </v-tabs-items>
+    </v-card>
 
-          <v-tabs v-model="tab" background-color="transparent" color="basil" grow>
-            <v-tab v-for="item in items" :key="item">{{ item }}</v-tab>
-          </v-tabs>
-
-          <v-tabs-items v-model="tab">
-            <v-tab-item v-for="item in items" :key="item">
-              <v-container>
-                <v-row>
-                  <v-col v-for="(painter, i) in painters" :key="i" cols="12" md="2">
-                    <v-card flat class="basil">
-                      <v-card-text class="text-center">
-                        <v-avatar size="100">
-                          <v-img :src="painter.avatar"></v-img>
-                        </v-avatar>
-                        <p>{{ painter.name }}</p>
-                        <v-chip small dark color="blue">文艺复兴</v-chip>
-                      </v-card-text>
-                      <v-card-actions class="white justify-center">
-                        <v-btn
-                          v-for="(social, i) in socials"
-                          :key="i"
-                          :color="social.color"
-                          class="white--text"
-                          fab
-                          icon
-                          small
-                        >
-                          <v-icon>{{ social.icon }}</v-icon>
-                        </v-btn>
-                      </v-card-actions>
-                    </v-card>
-                  </v-col>
-                  <v-divider vertical></v-divider>
-                </v-row>
-              </v-container>
-            </v-tab-item>
-          </v-tabs-items>
-        </v-card>
-      </v-timeline-item>
-      <v-timeline-item class="text-right">timeline item</v-timeline-item>
-      <v-timeline-item>timeline item</v-timeline-item>
-    </v-timeline>
     <v-row>
       <v-col v-for="(painter, i) in crafts" :key="i" cols="12" md="3">
         <v-card>

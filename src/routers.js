@@ -26,29 +26,33 @@ const routes = [
     component: () => import("@/views/Painter"),
   },
   {
-    path: "/test",
-    component: () => import("@/views/Craft"),
+    path: "/gallery",
+    component: () => import("@/views/Gallery"),
   },
   {
     path: "/mentor",
-    component: () => import("@/views/Mentor/index"),
+    component: () => import("@/views/Mentor"),
+  },
+  {
+    path: "/game",
+    component: () => import("@/views/ClassGame"),
   },
   {
     path: "/info",
-    component: () => import("@/views/Student/index"),
-    redirect: "/info/home",
-    children: [
-      {
-        path: "home",
-        name: "Home",
-        component: () => import("@/views/Student/Home"),
-      },
-      {
-        path: "history",
-        name: "history",
-        component: () => import("@/views/Student/History"),
-      },
-    ],
+    component: () => import("@/views/Info"),
+    // redirect: "/info/home",
+    // children: [
+    //   {
+    //     path: "home",
+    //     name: "Home",
+    //     component: () => import("@/views/Student/Home"),
+    //   },
+    //   {
+    //     path: "history",
+    //     name: "history",
+    //     component: () => import("@/views/Student/History"),
+    //   },
+    // ],
   },
   {
     path: "/platform",

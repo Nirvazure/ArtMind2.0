@@ -13,7 +13,6 @@
         ></ProgressCard>
       </v-col>
     </v-row>
-
   </v-container>
 </template>
 
@@ -26,7 +25,6 @@ export default {
     ProgressCard
   },
   data: () => ({
-
     cards: [
       { name: "印象派", value: 90, des: "Impressionist", color: "teal" },
       { name: "古典主义", value: 50, des: "Classcism", color: "purple" },
