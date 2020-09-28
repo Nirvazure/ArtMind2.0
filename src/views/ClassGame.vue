@@ -92,16 +92,16 @@ export default {
     };
   },
   methods: {
-    selectedEvent: function(item) {
+    selectedEvent: function (item) {
       this.selected = item;
     },
-    handleDragstart: function() {
+    handleDragstart: function () {
       console.log("handleDragstart");
     },
-    handleDragend: function() {
+    handleDragend: function () {
       console.log("handleDragend");
     },
-    handleCanceled: function() {
+    handleCanceled: function () {
       console.log("handleCanceled");
     },
   },

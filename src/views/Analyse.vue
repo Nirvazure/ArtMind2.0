@@ -1,16 +1,16 @@
 <template>
   <v-container>
     <v-row class="d-flex justify-center">
-      <v-card width="90%">
+      <v-card width="60%">
         <picture-input
           ref="pictureInput"
           accept="image/jpeg, image/png"
           size="10"
           hideChangeButton="true"
           :custom-strings="{
-          upload: '<h1>Bummer!</h1>',
-          drag: 'Drag a 😺 GIF or GTFO'
-        }"
+            upload: '<h1>Bummer!</h1>',
+            drag: 'Drag a 😺 GIF or GTFO',
+          }"
           @change="onChange"
         ></picture-input>
         <v-progress-linear
@@ -20,7 +20,12 @@
           color="deep-purple accent-4"
         ></v-progress-linear>
         <v-toolbar dense>
-          <v-overflow-btn :items="dropdown_font" label="Select Model" hide-details class="pa-0"></v-overflow-btn>
+          <v-overflow-btn
+            :items="dropdown_font"
+            label="Select Model"
+            hide-details
+            class="pa-0"
+          ></v-overflow-btn>
           <template v-if="$vuetify.breakpoint.mdAndUp">
             <v-divider vertical></v-divider>
             <v-overflow-btn
@@ -33,7 +38,13 @@
             ></v-overflow-btn>
             <v-divider vertical></v-divider>
             <v-spacer></v-spacer>
-            <v-btn-toggle v-model="toggle_multiple" color="primary" dense group multiple>
+            <v-btn-toggle
+              v-model="toggle_multiple"
+              color="primary"
+              dense
+              group
+              multiple
+            >
               <v-btn :value="3" text>
                 <v-icon>mdi-format-underline</v-icon>
               </v-btn>
@@ -74,7 +85,7 @@ export default {
     PictureInput,
     StyleAnalyse,
     EraAnalyse,
-    PainterAnalyse
+    PainterAnalyse,
   },
   data: () => ({
     dropdown_font: [{ text: "西方油画" }, { text: "山水画" }],
@@ -83,7 +94,7 @@ export default {
       { text: "75%" },
       { text: "50%" },
       { text: "25%" },
-      { text: "0%" }
+      { text: "0%" },
     ],
     toggle_exclusive: 2,
     toggle_multiple: [1, 2, 3],
@@ -91,7 +102,7 @@ export default {
     img: require("@/assets/avatar.jpg"),
     loading: false,
     btnText: "开启分析",
-    response: false
+    response: false,
   }),
   methods: {
     onChange(image) {
@@ -107,7 +118,7 @@ export default {
       this.btnText = "正在分析";
       this.loading = true;
       this.response = false;
-    }
+    },
   },
   watch: {
     loading(val) {
@@ -117,7 +128,7 @@ export default {
           (this.btnText = "开启探索"),
           (this.response = true);
       }, 3000);
-    }
-  }
+    },
+  },
 };
 </script>

@@ -11,7 +11,9 @@
           <v-col class="py-0">
             <v-list-item color="rgba(0, 0, 0, .4)" dark>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold display-2">文艺复兴</v-list-item-title>
+                <v-list-item-title class="font-weight-bold display-2"
+                  >文艺复兴</v-list-item-title
+                >
                 <v-list-item-subtitle>约1300-1600</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
@@ -57,47 +59,37 @@
         </v-tab-item>
       </v-tabs-items>
     </v-card>
-
-    <v-row>
-      <v-col v-for="(painter, i) in crafts" :key="i" cols="12" md="3">
-        <v-card>
-          <v-img :src="painter.avatar" aspect-ratio="1.5"></v-img>
-          <v-card-actions>
-            <v-card-action-text>{{ painter.name }}</v-card-action-text>
-            <v-spacer></v-spacer>
-            <v-btn color="red" dark>喜欢</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+    <PainterTable></PainterTable>
   </v-container>
 </template>
 
 <script>
+import PainterTable from "@/components/PainterTable";
 import painters from "@/api/painters.js";
 export default {
+  components: { PainterTable },
   data: () => ({
     tab: null,
     socials: [
       {
         icon: "mdi-facebook",
-        color: "indigo"
+        color: "indigo",
       },
       {
         icon: "mdi-linkedin",
-        color: "cyan darken-1"
+        color: "cyan darken-1",
       },
       {
         icon: "mdi-instagram",
-        color: "red lighten-3"
-      }
+        color: "red lighten-3",
+      },
     ],
     items: ["Painters", "Crafts", "Deserts", "Cocktails"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     painters: painters,
-    crafts: painters
-  })
+    crafts: painters,
+  }),
 };
 </script>
 

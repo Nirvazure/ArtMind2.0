@@ -4,6 +4,7 @@
       class="pa-12 d-flex justify-end align-center"
       color="indigo darken-2"
       flat
+      :height="exploreHeight"
       aspect-ratio="1"
       :img="img"
     >
@@ -25,13 +26,14 @@
 <script>
 export default {
   data: () => ({
+    exploreHeight: window.innerHeight,
     img: require("@/assets/crafts/c1.jpg"),
     painterImg: require("@/assets/painters/梵高.jpg"),
     items: [
       { title: "Home", icon: "dashboard" },
-      { title: "About", icon: "question_answer" }
-    ]
-  })
+      { title: "About", icon: "question_answer" },
+    ],
+  }),
 };
 </script>
 
