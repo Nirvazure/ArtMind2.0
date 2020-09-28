@@ -3,8 +3,8 @@
     <v-row>
       <v-col v-for="(model, i) in models" :key="i">
         <v-card :disabled="model.status == '待应用'" shaped>
-          <v-img :src="model.avatar" aspect-ratio="1.7"></v-img>
           <CircleStatistic
+            :avatar="model.avatar"
             :title="model.name"
             sub-title="70%"
             :caption="model.description"
